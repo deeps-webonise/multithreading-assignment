@@ -18,8 +18,6 @@ public class JoinAndSynchronizedDemo implements Runnable {
             incrementCount();
         }
     }
-
-
 }
 
 
