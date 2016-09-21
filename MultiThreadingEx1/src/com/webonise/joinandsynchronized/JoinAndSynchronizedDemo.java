@@ -3,7 +3,7 @@ package com.webonise.joinandsynchronized;
 //This program shows the use of join method and making method synchronized
 public class JoinAndSynchronizedDemo implements Runnable {
 
-    static int count = 0;
+    private static int count = 0;
 
     private static synchronized void incrementCount() {
         count++;
