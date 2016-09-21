@@ -4,11 +4,14 @@ import java.util.List;
 
 class Producer implements Runnable {
     private final List<Integer> itemsList;
-    private final int MAX_CAPACITY;
+    private final static int MAX_CAPACITY;
+
+    static {
+        MAX_CAPACITY = 5;//Only the producer requires the max size because if size is greate than max size producer will wait
+    }
 
     public Producer(List<Integer> itemsList) {
         this.itemsList = itemsList;
-        this.MAX_CAPACITY = 5;//Only the producer requires the max size because if size is greate than max size producer will wait
     }
 
     @Override
